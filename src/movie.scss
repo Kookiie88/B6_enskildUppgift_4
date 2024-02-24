@@ -1,0 +1,73 @@
+.movieInformation {
+  background-color: $colorTwo;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: $colorFive;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 100px 0;
+    max-width: 400px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    text-decoration: underline;
+  }
+
+  &__img {
+    width: 350px;
+    margin: 20px 0;
+  }
+
+  &__link {
+    color: $colorThree;
+    text-decoration: underline;
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
+
+  &__screenigsHeading {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+  }
+
+  &__list {
+    list-style: none;
+    text-align: left;
+
+    li {
+      padding-bottom: 10px;
+    }
+  }
+
+  &__reviewsHeading {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+  }
+
+&__oneReviewOpinion {
+  list-style: none;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+&__reviewsPrevNext {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 5px;
+      border: 0;
+      font-size: large;
+      font-weight: 700;
+      padding: 3px;
+      margin: 10px 10px;
+}
+}
