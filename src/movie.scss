@@ -27,7 +27,7 @@
   }
 
   &__link {
-    color: $colorThree;
+    color: $colorFive;
     text-decoration: underline;
     font-size: 1.5rem;
     margin: 20px 0;
@@ -54,20 +54,20 @@
     text-decoration: underline;
   }
 
-&__oneReviewOpinion {
-  list-style: none;
-  text-align: center;
-  padding-bottom: 10px;
-}
+  &__oneReviewOpinion {
+    list-style: none;
+    text-align: center;
+    padding-bottom: 10px;
+  }
 
-&__reviewsPrevNext {
-      width: 2rem;
-      height: 2rem;
-      border-radius: 5px;
-      border: 0;
-      font-size: large;
-      font-weight: 700;
-      padding: 3px;
-      margin: 10px 10px;
-}
+  &__reviewsPrevNext {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: 0;
+    font-size: large;
+    font-weight: 700;
+    padding: 3px;
+    margin: 10px 10px;
+  }
 }
