@@ -29,7 +29,7 @@ function appendScreenings(screeningData) {
   const screeningContainer = document.createElement("div");
   screeningContainer.classList.add("frontpage__container");
 
-  const screeningTitle = document.createElement("h4");
+  const screeningTitle = document.createElement("h2");
   screeningTitle.textContent = screeningData.title;
   screeningTitle.classList.add("frontpage__title");
   screeningContainer.appendChild(screeningTitle);
