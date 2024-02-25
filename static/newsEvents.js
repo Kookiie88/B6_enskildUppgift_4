@@ -45,6 +45,8 @@ function createInfoContainer(informationFeed) {
   const picture = document.createElement("img");
   picture.src = informationFeed.image;
   picture.classList.add("news__containerCard--image");
+  let trimmedTitle = informationFeed.title.split(":");
+  picture.alt = trimmedTitle[0];
   card.appendChild(picture);
 
   const box = document.createElement("div");
