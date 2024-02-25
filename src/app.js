@@ -2,12 +2,7 @@ import express from "express";
 import { engine } from "express-handlebars";
 import cmsAdapterRecentScreenings from "./cmsAdapterRecentScreenings.js";
 import getRecentScreenings from "./getRecentScreenings.js";
-import {
-  getMovie,
-  getMovies,
-  getMovieScreenings,
-  averageRating,
-} from "./movies.js";
+import { getMovie, getMovies, getMovieScreenings, averageRating } from "./movies.js";
 import { marked } from "marked";
 import getMovieReviews from "./getMovieReviews.js";
 import paginateReviews from "./paginateReviews.js";
@@ -30,6 +25,7 @@ const menu = [
   { name: "Movies", url: "/movies" },
   { name: "About us", url: "/aboutus" },
   { name: "News & events", url: "/newsevents" },
+  { name: "WCAG results", url: "/wcagtestresults" },
 ];
 
 async function renderPage(response, page, extraData = {}) {
@@ -76,12 +72,13 @@ app.get("/newsevents", async (request, response) => {
   renderPage(response, "newsevents");
 });
 
+app.get("/wcagtestresults", async (request, response) => {
+  renderPage(response, "wcagtestresults");
+});
+
 app.get("/api/movies/:id/screenings", async (request, response) => {
   try {
-    const movieScreenings = await getMovieScreenings(
-      cmsAdapter,
-      request.params.id
-    );
+    const movieScreenings = await getMovieScreenings(cmsAdapter, request.params.id);
     response.json(movieScreenings);
   } catch (error) {
     console.log(error.message);
@@ -140,5 +137,6 @@ app.get("/api/movies/rating/:id", async (req, res) => {
 
 app.use("/static", express.static("./static"));
 app.use("/public", express.static("./public"));
+app.use("/WCAGtesting", express.static("./WCAGtesting"));
 
 export default app;

@@ -658,3 +658,26 @@ main {
   padding: 3px;
   margin: 10px 0;
 }
+
+.wcagContainer {
+  background-color: #404040;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wcagContainer h2 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.wcagContainer__link {
+  color: #ffffff;
+  font-size: 1.2rem;
+  list-style: none;
+  text-align: center;
+}
+.wcagContainer a {
+  color: #ffffff;
+}
