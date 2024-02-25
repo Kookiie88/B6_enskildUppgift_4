@@ -499,6 +499,9 @@ main {
   justify-content: center;
   align-items: center;
 }
+.movieContainer__list {
+  text-align: center;
+}
 .movieContainer h1 {
   color: #ffffff;
   font-size: 2rem;

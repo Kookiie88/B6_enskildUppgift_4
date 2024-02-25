@@ -5,6 +5,10 @@
   justify-content: center;
   align-items: center;
 
+  &__list {
+    text-align: center;
+  }
+
   & h1 {
     color: $colorFive;
     font-size: 2rem;
